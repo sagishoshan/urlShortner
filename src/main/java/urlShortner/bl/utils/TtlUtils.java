@@ -1,5 +1,6 @@
 package urlShortner.bl.utils;
 
+import urlShortner.AppContext;
 import urlShortner.bl.model.UrlInfo;
 
 import java.time.Duration;
@@ -7,7 +8,7 @@ import java.time.LocalDateTime;
 
 public class TtlUtils {
 
-    private static final Integer TTL_LIMIT_IN_SECONDS = 30 * 60;
+    private static final Integer TTL_LIMIT_IN_SECONDS = AppContext.getInstance().getTtlInSeconds();
 
     public static Boolean isTtlExpired(UrlInfo urlInfo) {
         Boolean retVal = true;

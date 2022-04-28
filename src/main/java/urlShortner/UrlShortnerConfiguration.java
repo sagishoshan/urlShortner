@@ -18,6 +18,10 @@ public class UrlShortnerConfiguration extends Configuration implements JobConfig
     @Valid
     @Max(32)
     private Integer shortUrlLength;
+
+    @NotNull
+    @Valid
+    private Integer ttlInSeconds;
     //endregion
 
     //region Getters & Setters
@@ -37,5 +41,12 @@ public class UrlShortnerConfiguration extends Configuration implements JobConfig
         this.shortUrlLength = shortUrlLength;
     }
 
+    public Integer getTtlInSeconds() {
+        return ttlInSeconds;
+    }
+
+    public void setTtlInSeconds(Integer ttlInSeconds) {
+        this.ttlInSeconds = ttlInSeconds;
+    }
     //endregion
 }

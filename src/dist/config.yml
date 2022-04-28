@@ -23,3 +23,4 @@ server:
 ##############################################
 hashAlgorithm: "MD5" # SHA-256
 shortUrlLength: 5
+ttlInSeconds: 1800

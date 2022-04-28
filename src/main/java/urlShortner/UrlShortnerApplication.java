@@ -55,6 +55,7 @@ public class UrlShortnerApplication extends Application<UrlShortnerConfiguration
         initUrlbyKeyMap();
         initHashAltorithm(configuration);
         initShortUrlLength(configuration);
+        initTtlInSeconds(configuration);
     }
 
     private void initUrlbyKeyMap() {
@@ -76,6 +77,10 @@ public class UrlShortnerApplication extends Application<UrlShortnerConfiguration
 
     private void initShortUrlLength(UrlShortnerConfiguration configuration) {
         AppContext.getInstance().setShortUrlLength(configuration.getShortUrlLength());
+    }
+
+    private void initTtlInSeconds(UrlShortnerConfiguration configuration) {
+        AppContext.getInstance().setTtlInSeconds(configuration.getTtlInSeconds());
     }
     //endregion
 }

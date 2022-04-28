@@ -26,6 +26,7 @@ public class AppContext {
     private Map<String, UrlInfo> urlInfoMappedByKey;
     private MessageDigest        messageDigest;
     private Integer              shortUrlLength;
+    private Integer              ttlInSeconds;
     //endregion
 
     //region Getters & Setters
@@ -51,6 +52,14 @@ public class AppContext {
 
     public void setShortUrlLength(Integer shortUrlLength) {
         this.shortUrlLength = shortUrlLength;
+    }
+
+    public Integer getTtlInSeconds() {
+        return ttlInSeconds;
+    }
+
+    public void setTtlInSeconds(Integer ttlInSeconds) {
+        this.ttlInSeconds = ttlInSeconds;
     }
     //endregion
 
